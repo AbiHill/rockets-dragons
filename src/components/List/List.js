@@ -2,8 +2,7 @@ import React from 'react';
 
 import { ListWrapper, ListItem, ListTitle, ListImg, ListButton } from './styles';
 
-const List = (props) => {
-  return (
+const List = (props) => (
     <ListWrapper>
       {props.data &&
         props.data.map((item) => (
@@ -15,6 +14,5 @@ const List = (props) => {
         ))}
     </ListWrapper>
   );
-};
 
 export default List;

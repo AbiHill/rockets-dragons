@@ -56,7 +56,7 @@ class Home extends React.PureComponent {
       <div>
         <List onClick={this.handleListItemButtonClick} data={this.state.dragons} />
         <List onClick={this.handleListItemButtonClick} data={this.state.rockets} />
-        {this.state.infoPanelIsOpen && <Panel data={this.state} />}
+        {this.state.infoPanelIsOpen && <Panel data={this.state.individualItem} />}
       </div>
     );
   }
