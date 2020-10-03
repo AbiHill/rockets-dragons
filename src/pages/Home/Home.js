@@ -27,11 +27,14 @@ class Home extends React.Component {
   
   render() {
     return (
-      <>
+      <div>
         { this.state.dragons &&
           <List data={ this.state.dragons }  />
         }
-      </>
+        { this.state.rockets &&
+          <List data={ this.state.rockets }  />
+        }
+      </div>
     )
   }  
 }
