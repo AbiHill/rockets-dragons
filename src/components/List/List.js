@@ -1,17 +1,24 @@
 import React from 'react';
 
+import {
+  ListWrapper,
+  ListItem,
+  ListTitle,
+  ListImg
+} from './styles';
+
 const List = ( props ) => {
   return(
-    <ul>
+    <ListWrapper>
       { props.data &&
           props.data.map(( item ) => (
-            <li>
-              <h2>{ item.name || item.rocket_name }</h2>
-              <img src={ item.flickr_images[0] } alt={ item.name || item.rocket_name } />
-            </li>
+            <ListItem key={item.id}>
+              <ListTitle>{ item.name || item.rocket_name }</ListTitle>
+              <ListImg src={ item.flickr_images[0] } alt={ item.name || item.rocket_name } />
+            </ListItem>
         ))
       }
-    </ul>
+    </ListWrapper>
   )
 }
 
