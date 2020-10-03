@@ -17,7 +17,7 @@ class Home extends React.Component {
       const response = await fetch(endpoint);
       if (response.ok) {
         const jsonResp = await response.json();
-        this.setState({ [type] : jsonResp});
+        this.setState({ [type]: jsonResp });
       }
     }
     catch(err) {
@@ -28,7 +28,9 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <List />
+        { this.state.dragons &&
+          <List data={ this.state.dragons }  />
+        }
       </>
     )
   }  

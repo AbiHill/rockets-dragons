@@ -1,10 +1,17 @@
 import React from 'react';
 
-const List = () => {
+const List = ( props ) => {
   return(
-    <div>
-      <p>Hello, I am a list</p>
-    </div>
+    <ul>
+      { props.data &&
+          props.data.map(( item ) => (
+            <li>
+              <h2>{ item.name }</h2>
+              <img src={ item.flickr_images[0] } alt={ item.name } />
+            </li>
+        ))
+      }
+    </ul>
   )
 }
 
