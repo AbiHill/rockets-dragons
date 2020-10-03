@@ -16,5 +16,9 @@ export const ListTitle = styled.h2`
 
 export const ListImg = styled.img`  
   border: 1px solid green;
-  max-width: 200px
+  max-width: 200px;
+`;
+
+export const ListButton = styled.div`
+  border: 1px solid orange;
 `;

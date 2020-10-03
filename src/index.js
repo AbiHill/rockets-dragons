@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Reset } from 'styled-reset';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { GlobalStyles } from './global-styles';
+import GlobalStyles from './global-styles';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Reset />
     <GlobalStyles />
     <App />
   </React.StrictMode>,
