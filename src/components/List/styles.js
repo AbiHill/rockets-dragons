@@ -2,6 +2,8 @@ import styled from 'styled-components/macro';
 
 export const ListWrapper = styled.ul`  
   display: flex;
+  padding: 16px;
+  justify-content: center;
 `;
 
 export const ListItem = styled.li`  

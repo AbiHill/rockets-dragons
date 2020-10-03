@@ -8,10 +8,4 @@ export const GlobalStyles = createGlobalStyle`
   background-color: #000000;
   color: #ffffff;
   font-size: 16px;
-}
-
-ul {
-  list-style-type: none; 
-}
-
-`;
+}`;
