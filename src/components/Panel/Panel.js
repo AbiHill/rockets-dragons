@@ -1,15 +1,25 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 
-const Panel = (props) => (
+const Panel = ({ data, onClick, onKeyPress }) => (
   <div>
-    {props.data && (
+    {data && (
       <div>
-        <h2>{props.data.name || props.data.rocket_name}</h2>
-        <p>{props.data.description}</p>
-        <img src={props.data.flickr_images} alt='alt text' />
+        <div onClick={onClick} onKeyPress={onKeyPress} role="button" tabIndex="0">
+          close
+        </div>
+        <h2>{data.name || data.rocket_name}</h2>
+        <p>{data.description}</p>
+        <img src={data.flickr_images} alt="alt text" />
       </div>
     )}
   </div>
 );
+
+Panel.propTypes = {
+  data: PropTypes.object.isRequired,
+  onClick: PropTypes.func.isRequired,
+  onKeyPress: PropTypes.func.isRequired,
+};
 
 export default Panel;
