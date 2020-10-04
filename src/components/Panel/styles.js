@@ -33,10 +33,16 @@ export const InfoTitle = styled.h2`
   font-size: 2rem;
   margin-top: 40px;
   padding: 16px 0;
+  color: #071d36;
+
+  @media (min-width: 1024px) {
+    padding: 16px 70px;
+  }
 `;
 
 export const InfoDesc = styled.p`
   font-size: 1rem;
+  color: #071d36;
 
   @media (min-width: 768px) {
     padding: 20px;
