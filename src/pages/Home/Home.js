@@ -62,8 +62,8 @@ class Home extends React.PureComponent {
     return (
       <div>
         <TitleWrapper>
-          <Image src={moon} alt="moon" />
-          <Title>Rockets & Dragons</Title>
+          <Image id="moon" src={moon} alt="moon" />
+          <Title id="title">Rockets & Dragons</Title>
         </TitleWrapper>
         <Toggle onClick={this.handleToggle} onKeyPress={this.handleToggle} select={typeToggle} />
         {typeToggle && (

@@ -30,6 +30,8 @@ export const Title = styled.h1`
   }
 `;
 
+Title.displayName = 'TitleWrapper';
+
 export const Image = styled.img`
   font-size: 4rem;
   text-align: center;

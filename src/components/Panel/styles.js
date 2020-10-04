@@ -51,6 +51,14 @@ export const InfoDesc = styled.p`
   }
 `;
 
+export const MetaData = styled.p`
+  margin-top: 20px;
+
+  @media (min-width: 768px) {
+    margin-top: 34px;
+  }
+`;
+
 export const CloseButton = styled.div`
   color: white;
   font-size: 2rem;

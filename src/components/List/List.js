@@ -26,9 +26,9 @@ const List = ({ data, onClick, onKeyPress, type }) => (
 
 List.propTypes = {
   data: PropTypes.array,
-  onClick: PropTypes.func.isRequired,
-  onKeyPress: PropTypes.func.isRequired,
-  type: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  onKeyPress: PropTypes.func,
+  type: PropTypes.string,
 };
 
 export default List;
