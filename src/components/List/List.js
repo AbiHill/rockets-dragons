@@ -18,14 +18,14 @@ const List = ({ data, onClick, onKeyPress, type }) => (
         >
           <ListTitle>{item.name || item.rocket_name}</ListTitle>
           <ListImg src={item.flickr_images[0]} alt={item.name || item.rocket_name} />
-          <ListButton>More info</ListButton>
+          <ListButton>Read More</ListButton>
         </ListItem>
       ))}
   </ListWrapper>
 );
 
 List.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.array,
   onClick: PropTypes.func.isRequired,
   onKeyPress: PropTypes.func.isRequired,
   type: PropTypes.string.isRequired,

@@ -1,23 +1,27 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 
+import { CloseButton, PanelWrapper, MoreInfoImage, InfoTitle, InfoDesc, ContentWrapper } from './styles';
+
 const Panel = ({ data, onClick, onKeyPress }) => (
   <div>
     {data && (
-      <div>
-        <div onClick={onClick} onKeyPress={onKeyPress} role="button" tabIndex="0">
-          close
-        </div>
-        <h2>{data.name || data.rocket_name}</h2>
-        <p>{data.description}</p>
-        <img src={data.flickr_images} alt="alt text" />
-      </div>
+      <PanelWrapper>
+        <CloseButton onClick={onClick} onKeyPress={onKeyPress} role="button" tabIndex="0">
+          X
+        </CloseButton>
+        <InfoTitle>{data.name || data.rocket_name}</InfoTitle>
+        <ContentWrapper>
+          <InfoDesc>{data.description}</InfoDesc>
+          <MoreInfoImage src={data.flickr_images} alt="alt text" />
+        </ContentWrapper>
+      </PanelWrapper>
     )}
   </div>
 );
 
 Panel.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object,
   onClick: PropTypes.func.isRequired,
   onKeyPress: PropTypes.func.isRequired,
 };

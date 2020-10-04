@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Toggle = ({ onClick, onKeyPress }) => (
-  <div>
-    <div onClick={onClick} onKeyPress={onKeyPress} role="button" tabIndex="0">
+import { ToggleButton, ToggleWrapper } from './styles';
+
+const Toggle = ({ onClick, onKeyPress, select }) => (
+  <ToggleWrapper>
+    <ToggleButton onClick={onClick} onKeyPress={onKeyPress} role="button" tabIndex="0" disabled={select}>
       Rockets
-    </div>
-    <div onClick={onClick} onKeyPress={onKeyPress} role="button" tabIndex="0">
+    </ToggleButton>
+    <ToggleButton onClick={onClick} onKeyPress={onKeyPress} role="button" tabIndex="0" disabled={!select}>
       Dragons
-    </div>
-  </div>
+    </ToggleButton>
+  </ToggleWrapper>
 );
 
 Toggle.propTypes = {

@@ -2,6 +2,9 @@ import React from 'react';
 import List from '../../components/List/List';
 import Panel from '../../components/Panel/Panel';
 import Toggle from '../../components/Toggle/Toggle';
+import moon from '../../assets/images/moon.png';
+
+import { Title, Image, TitleWrapper } from './styles';
 
 class Home extends React.PureComponent {
   constructor() {
@@ -49,7 +52,7 @@ class Home extends React.PureComponent {
   };
 
   handleClosePanel = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' || e.type === 'click') {
       this.setState({ infoPanelIsOpen: false });
     }
   };
@@ -58,7 +61,11 @@ class Home extends React.PureComponent {
     const { typeToggle, dragons, rockets, infoPanelIsOpen, individualItem } = this.state;
     return (
       <div>
-        <Toggle onClick={this.handleToggle} onKeyPress={this.handleToggle} />
+        <TitleWrapper>
+          <Image src={moon} alt="moon" />
+          <Title>Rockets & Dragons</Title>
+        </TitleWrapper>
+        <Toggle onClick={this.handleToggle} onKeyPress={this.handleToggle} select={typeToggle} />
         {typeToggle && (
           <List
             onClick={this.handleListItemButtonClick}
